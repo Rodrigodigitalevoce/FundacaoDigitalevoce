@@ -42,7 +42,7 @@
             text-shadow: 0px 0px 10px rgba(212, 175, 55, 0.4);
         }
         
-        /* Animações de Scroll */
+        /* Animações de Scroll e Foto */
         .reveal {
             opacity: 0;
             transform: translateY(40px);
@@ -51,6 +51,16 @@
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
+        }
+
+        .fade-in-photo {
+            animation: fadeInPhoto 1.5s ease-in-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInPhoto {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
         }
 
         /* Barra Superior */
@@ -237,8 +247,8 @@
 
     <!-- Hero Section -->
     <section class="hero reveal">
-        <!-- Substitua o src abaixo pelo link da sua foto real -->
-        <img src="https://via.placeholder.com/150/121212/d4af37?text=Rodrigo" alt="Rodrigo Rodrigues" class="author-photo">
+        <!-- Foto do Autor com Efeito Fade In -->
+        <img src="1000002223.jpg" alt="Rodrigo Rodrigues" class="author-photo fade-in-photo">
         
         <h1>Método <span class="destaque-21">21</span> Dias para Clareza Mental e Orgânica</h1>
         <p>Um programa direto ao ponto de <span class="destaque-21">21</span> dias para destravar o freio biológico emocional, acalmar o sistema nervoso e criar extratos de segurança para preparar a mente para assumir uma nova realidade de sucesso aonde você alcança o que quer.</p>
