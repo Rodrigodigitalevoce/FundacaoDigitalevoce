@@ -1,390 +1,403 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FundaçãoDigitalevoce | Livros Autorais de Rodrigo Rodrigues</title>
-    <!-- Fontes Premium -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --bg-dark: #070707;
-            --card-bg: #121212;
-            --gold-primary: #d4af37;
-            --gold-light: #fcf6ba;
-            --gold-gradient: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
-            --text-main: #f5f5f5;
-            --text-muted: #b0b0b0;
-            --border-gold: rgba(212, 175, 55, 0.35);
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Método 21 Dias - Clareza Mental e Orgânica | Rodrigo Rodrigues</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap');
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  body {
+    background-color: #0d0d0d;
+    color: #f0f0f0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
 
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
+  .gold-text {
+    color: #d4af37;
+    font-weight: 700;
+  }
 
-        h1, h2, h3 {
-            font-family: 'Cinzel', serif;
-            letter-spacing: 1.5px;
-        }
+  .num-21 {
+    font-size: 1.3em;
+    font-weight: 900;
+    color: #f3e5ab;
+    text-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+  }
 
-        .gold-text {
-            background: var(--gold-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 800;
-        }
+  .top-bar {
+    background: linear-gradient(90deg, #111, #d4af37, #111);
+    color: #000;
+    text-align: center;
+    padding: 12px 15px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
 
-        header {
-            padding: 60px 20px 40px;
-            text-align: center;
-            border-bottom: 1px solid var(--border-gold);
-            background: radial-gradient(circle, rgba(212,175,55,0.12) 0%, rgba(7,7,7,1) 85%);
-        }
+  .hero-section {
+    padding: 60px 20px 40px 20px;
+    text-align: center;
+    background: radial-gradient(circle, #1a1a1a 0%, #0d0d0d 100%);
+  }
 
-        header h1 {
-            font-size: 2.8rem;
-            text-transform: uppercase;
-            margin-bottom: 5px;
-        }
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
 
-        header p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
+  p.subtitle {
+    font-size: 1.1rem;
+    color: #cccccc;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+  }
 
-        .container {
-            max-width: 1050px;
-            margin: 0 auto;
-            padding: 50px 20px;
-        }
+  .btn-checkout {
+    display: inline-block;
+    background: linear-gradient(45deg, #d4af37, #f3e5ab);
+    color: #000000;
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding: 18px 36px;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    margin: 20px 0;
+  }
 
-        section {
-            margin-bottom: 70px;
-        }
+  .btn-checkout:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 30px rgba(212, 175, 55, 0.7);
+  }
 
-        .section-title {
-            text-align: center;
-            font-size: 2.2rem;
-            margin-bottom: 35px;
-            position: relative;
-            padding-bottom: 15px;
-            text-transform: uppercase;
-        }
+  .block-card {
+    background-color: #141414;
+    border: 1px solid #262626;
+    border-left: 4px solid #d4af37;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 850px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+  }
 
-        .section-title::after {
-            content: '';
-            width: 90px;
-            height: 3px;
-            background: var(--gold-gradient);
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+  .block-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-        .quote-banner {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-gold);
-            border-radius: 16px;
-            padding: 40px 30px;
-            text-align: center;
-            margin-bottom: 60px;
-            box-shadow: 0 0 25px rgba(212, 175, 55, 0.08);
-        }
+  .photo-box {
+    text-align: center;
+    margin: 30px 0;
+  }
 
-        .quote-banner p {
-            font-size: 1.35rem;
-            font-weight: 600;
-            line-height: 1.8;
-            color: var(--text-main);
-        }
+  .photo-box img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid #d4af37;
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+    object-fit: cover;
+  }
 
-        .quote-banner span {
-            display: block;
-            margin-top: 15px;
-            font-size: 1.05rem;
-            color: var(--text-muted);
-            font-weight: 300;
-        }
+  .testimonial-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
 
-        .story-box {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-gold);
-            border-radius: 16px;
-            padding: 40px;
-            margin-bottom: 60px;
-        }
+  .testimonial-card {
+    background-color: #181818;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 280px;
+    box-sizing: border-box;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+  }
 
-        .story-box h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
+  .testimonial-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-        .story-box p {
-            font-size: 1.05rem;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-        }
+  .faq-item {
+    margin-bottom: 20px;
+    text-align: left;
+  }
 
-        /* Hero / Livro Destaque */
-        .main-book {
-            background-color: var(--card-bg);
-            border: 2px solid var(--gold-primary);
-            border-radius: 16px;
-            padding: 40px;
-            box-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
-            text-align: center;
-            margin-bottom: 60px;
-        }
+  .faq-question {
+    font-weight: 700;
+    color: #d4af37;
+    font-size: 1.1rem;
+  }
 
-        .main-book h3 {
-            font-size: 2.2rem;
-            margin-bottom: 15px;
-        }
+  .faq-answer {
+    color: #dddddd;
+    margin-top: 5px;
+  }
 
-        .main-book p {
-            color: var(--text-muted);
-            font-size: 1.15rem;
-            margin-bottom: 30px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+  .price-highlight {
+    font-size: 2.2rem;
+    color: #ffffff;
+    font-weight: 900;
+  }
 
-        /* Grid de Outros Livros */
-        .grid-books {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-        }
+  .guarantee-box {
+    border: 2px dashed #d4af37;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 700px;
+    margin: 40px auto;
+    background-color: #111;
+  }
 
-        .card-book {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-gold);
-            border-radius: 12px;
-            padding: 30px 25px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.3s, border-color 0.3s;
-        }
-
-        .card-book:hover {
-            transform: translateY(-5px);
-            border-color: var(--gold-primary);
-        }
-
-        .card-book h4 {
-            font-size: 1.35rem;
-            margin-bottom: 12px;
-        }
-
-        .card-book p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 25px;
-            flex-grow: 1;
-        }
-
-        /* Depoimentos */
-        .grid-testimonials {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .testimonial-card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-gold);
-            border-radius: 12px;
-            padding: 30px;
-        }
-
-        .testimonial-card p {
-            font-style: italic;
-            color: var(--text-main);
-            margin-bottom: 20px;
-        }
-
-        .testimonial-card h5 {
-            color: var(--gold-primary);
-            font-size: 1.05rem;
-            font-weight: 700;
-        }
-
-        .testimonial-card span {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        /* Botões */
-        .btn {
-            display: block;
-            width: 100%;
-            background: var(--gold-gradient);
-            color: #000;
-            padding: 14px 20px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            text-align: center;
-            transition: opacity 0.3s, transform 0.2s;
-            border: none;
-        }
-
-        .btn:hover {
-            opacity: 0.92;
-            transform: scale(1.02);
-        }
-
-        .btn-large {
-            max-width: 380px;
-            margin: 0 auto;
-            font-size: 1rem;
-            padding: 16px 30px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            border-top: 1px solid var(--border-gold);
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            background-color: #040404;
-        }
-
-        .social-links {
-            margin-top: 20px;
-        }
-
-        .social-links a {
-            color: var(--gold-primary);
-            margin: 0 12px;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        @media (max-width: 768px) {
-            header h1 { font-size: 2.1rem; }
-            .section-title { font-size: 1.75rem; }
-            .quote-banner p { font-size: 1.15rem; }
-            .story-box, .main-book { padding: 25px; }
-        }
-    </style>
+  @media (max-width: 600px) {
+    h1 { font-size: 1.8rem; }
+    .btn-checkout { font-size: 1rem; padding: 15px 25px; width: 100%; }
+    .testimonial-card { width: 100%; }
+  }
+</style>
 </head>
 <body>
 
-    <header>
-        <h1 class="gold-text">FundaçãoDigitalevoce</h1>
-        <p>Por Rodrigo Rodrigues</p>
-    </header>
+  <!-- Topo Promocional -->
+  <div class="top-bar">
+    Dezenas de pessoas já tiveram suas vidas modificadas • Transformação Real de Pessoas Reais
+  </div>
 
-    <div class="container">
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <h1>Método <span class="num-21">21</span> Dias para Clareza Mental e Orgânica</h1>
+    <p class="subtitle">
+      Um programa direto ao ponto de <span class="num-21">21</span> dias para destravar o freio biológico emocional, acalmar o sistema nervoso e criar extratos de segurança para preparar a sua mente a assumir uma nova realidade de sucesso onde você alcança o que quer.
+    </p>
 
-        <!-- FRASE IMPACTANTE -->
-        <div class="quote-banner">
-            <p>"A realidade que você vive é um espelho exato do seu estado interior."</p>
-            <span>Se você está atraindo o que não quer, existem crenças no seu subconsciente que justificam isso. Reprograme o drive do seu subconsciente e atraia uma nova realidade.</span>
-        </div>
-
-        <!-- MENSAGEM DO AUTOR -->
-        <section class="story-box">
-            <h2 class="gold-text">Assuma o Governo da Sua Vida</h2>
-            <p>Durante muito tempo nos ensinaram a tentar mudar o mundo exterior sem entender que a chave de tudo está na estrutura dos nossos pensamentos e no nosso subconsciente.</p>
-            <p>Eu sou <strong>Rodrigo Rodrigues</strong>, escritor e mentor. Desenvolvi uma metodologia de ressignificação da mentalidade para te ensinar a desarmar o seu sistema de sobrevivência e parar de repetir ciclos destrutivos.</p>
-            <p>Através das minhas obras, apresento o caminho prático para quem deseja reprogramar a mente e alcançar a governança da própria realidade.</p>
-        </section>
-
-        <!-- LIVRO DESTAQUE PRINCIPAL -->
-        <section>
-            <h2 class="section-title gold-text">Obra Principal em Destaque</h2>
-            <div class="main-book">
-                <h3 class="gold-text">Mais Esperto Que Você Mesmo</h3>
-                <p>Como desarmar o seu sistema de sobrevivência e assumir o Governo da sua vida. Descubra os códigos práticos para dominar seus padrões mentais e parar de ser sabotado pela sua própria mente.</p>
-                <a href="https://beacons.ai/fundacaodigitalevoce.com.br" target="_blank" class="btn btn-large">Garantir Meu Exemplar</a>
-            </div>
-        </section>
-
-        <!-- OUTRAS OBRAS AUTORAIS -->
-        <section>
-            <h2 class="section-title gold-text">Outras Obras Literárias</h2>
-            <div class="grid-books">
-                
-                <div class="card-book">
-                    <h4 class="gold-text">Código no Governo para Prosperidade</h4>
-                    <p>As chaves de reprogramação mental para virar o drive da escassez para a abundância.</p>
-                    <a href="https://beacons.ai/fundacaodigitalevoce.com.br" target="_blank" class="btn">Adquirir Livro</a>
-                </div>
-
-                <div class="card-book">
-                    <h4 class="gold-text">O Fim da Dependência</h4>
-                    <p>Rompa as amarras emocionais e conquiste a verdadeira autonomia mental e espiritual.</p>
-                    <a href="https://beacons.ai/fundacaodigitalevoce.com.br" target="_blank" class="btn">Adquirir Livro</a>
-                </div>
-
-                <div class="card-book">
-                    <h4 class="gold-text">Contratos Invisíveis</h4>
-                    <p>Identifique e anule os acordos subconscientes inconscientes que travam o seu avanço.</p>
-                    <a href="https://beacons.ai/fundacaodigitalevoce.com.br" target="_blank" class="btn">Adquirir Livro</a>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- TESTEMUNHOS -->
-        <section>
-            <h2 class="section-title gold-text">Transformações de Leitores</h2>
-            <div class="grid-testimonials">
-                
-                <div class="testimonial-card">
-                    <p>"A leitura de 'Mais Esperto Que Você Mesmo' me fez entender por que eu repetia os mesmos erros há anos. O conceito do subconsciente me salvou!"</p>
-                    <h5>— Marcos Andrade</h5>
-                    <span>Leitor</span>
-                </div>
-
-                <div class="testimonial-card">
-                    <p>"Desfazer os contratos invisíveis foi a virada de chave que eu precisava. O Rodrigo tem uma linguagem simples e direta."</p>
-                    <h5>— Camila Silveira</h5>
-                    <span>Leitora</span>
-                </div>
-
-                <div class="testimonial-card">
-                    <p>"Mudei a estrutura dos meus pensamentos e minha vida financeira respondeu no mês seguinte. Leitura obrigatória!"</p>
-                    <h5>— Patricia M.</h5>
-                    <span>Leitora</span>
-                </div>
-
-            </div>
-        </section>
-
+    <!-- Espaço para Foto do Autor com efeito de entrada -->
+    <div class="photo-box">
+      <div style="font-size:0.85rem; color:#d4af37; margin-bottom:10px; letter-spacing:2px; text-transform:uppercase; font-weight:700;">Mentor & Criador do Método</div>
+      <img src="https://via.placeholder.com/200/111111/d4af37?text=Rodrigo+Rodrigues" alt="Rodrigo Rodrigues">
+      <h3 style="margin-top:15px; color:#fff;">Rodrigo Rodrigues</h3>
     </div>
 
-    <footer>
-        <p>&copy; 2026 FundaçãoDigitalevoce | Rodrigo Rodrigues. Todos os direitos reservados.</p>
-        <div class="social-links">
-            <a href="https://tiktok.com/@rodrigodafe" target="_blank">TikTok</a> | 
-            <a href="https://instagram.com/digotraderpro" target="_blank">Instagram</a> | 
-            <a href="https://beacons.ai/fundacaodigitalevoce.com.br" target="_blank">Portal Beacons</a>
+    <a href="https://pay.kiwify.com.br/mtGFoHg" class="btn-checkout">Quero Entrar no Método 21 Dias</a>
+  </div>
+
+  <div style="padding: 10px 20px;">
+
+    <!-- Bloco 1: A Dor Real -->
+    <div class="block-card">
+      <h2 style="color:#d4af37; margin-bottom:15px;">Você sabe que pode ir mais longe, mas sente que existe um teto que te prende?</h2>
+      <p>Você já tentou diversas alternativas. Já fez meditações soltas, afirmações e nada muda! Durante um período você até acreditou que poderia mudar, mas nada aconteceu!</p>
+      <p style="margin-top:10px;"><strong>Aqui o problema não é falta de capacidade!</strong> Eu te mostro uma nova realidade: aqui é somente o orgânico e o sistema nervoso trabalhando contra você.</p>
+      <p style="margin-top:10px;">Em <span class="num-21">21</span> dias para clareza mental e orgânica, nós vamos mudar essa realidade para uma realidade confortável onde você alcança os seus objetivos!</p>
+    </div>
+
+    <!-- Bloco 2: Frase Solta em Dourado -->
+    <div class="block-card" style="text-align: center; border-left: 4px solid #fff;">
+      <p style="font-size: 1.25rem; color: #d4af37; font-weight: 600;">
+        "Você acredita que pode mais, mas saiba que o resultado externo é um reflexo do que você tem dentro! Mude o interior e o restante vai junto!"
+      </p>
+    </div>
+
+    <!-- Bloco 3: As Palavras de Quem Já Passou (História) -->
+    <div class="block-card">
+      <h2 style="color:#ffffff; margin-bottom:15px;">As palavras de quem já passou!</h2>
+      <p style="color:#d4af37; font-style:italic; font-weight:600;">"Eu tive um diagnóstico cruel de não andar mais devido a um acidente!"</p>
+      <p style="margin-top:10px;">Um acontecimento que mudou tudo! Um acidente onde perdi todos os meus amigos. Éramos quatro, só eu tive a oportunidade de ficar vivo! E eu fiquei paralisado em um CID T90.5. Impossível de voltar a andar!</p>
+      <p style="margin-top:10px;">Mas algo sobrenatural aconteceu! Eu descobri um caminho através da Fé juntamente com a ciência em mais de 15 anos estudando a fundo. Pude descobrir o segredo que pouquíssimos têm o privilégio de descobrir!</p>
+      <p style="margin-top:10px;">Neste curso você vai aprender o passo a passo de como acessar esse poder infinito!</p>
+    </div>
+
+    <!-- Bloco 4: Teoria / Por que 21 Dias? -->
+    <div class="block-card">
+      <h2 style="color:#d4af37; margin-bottom:15px;">Por que o Método Funciona em <span class="num-21">21</span> Dias?</h2>
+      <p>Em <span class="num-21">21</span> dias para clareza mental e orgânica, você vai encontrar um potencial escondido dentro de você que já foi desvendado há mais de 2.000 anos e está sendo revelado para você aqui agora!</p>
+      <p style="margin-top:10px;">Teoria de como funciona o sistema nervoso, a prática de como moldá-lo ao ponto que quiser, e exercícios para ressignificar na prática para alcançar a realidade que deseja!</p>
+    </div>
+
+    <!-- Bloco 5: Estrutura dos Módulos & Meditações -->
+    <div class="block-card">
+      <h2 style="color:#ffffff; text-align:center; margin-bottom:20px;">Estrutura dos Módulos & Áudios Guiados</h2>
+      
+      <div style="margin-bottom: 20px; padding: 15px; background:#1a1a1a; border-radius:8px;">
+        <h3 class="gold-text">Módulo 1: Teoria e Mapeamento Emocional</h3>
+        <p>Um conhecimento de como funcionam as emoções e como elas criam uma realidade na sua vida sem você sequer perceber, e como elas se repetem a cada dia.</p>
+        <p style="color:#f3e5ab; font-weight:600; margin-top:10px;">🧘‍♂️ Meditação Guiada #1: Ressignificação Inicial e Desativação do Alerta de Estresse.</p>
+      </div>
+
+      <div style="margin-bottom: 20px; padding: 15px; background:#1a1a1a; border-radius:8px;">
+        <h3 class="gold-text">Módulo 2: Exercícios Práticos no Sistema Nervoso</h3>
+        <p>Exercícios para direcionar você e o seu subconsciente a uma nova realidade, entrando no modo de segurança e criando novas vias neurais.</p>
+        <p style="color:#f3e5ab; font-weight:600; margin-top:10px;">🧘‍♂️ Meditação Guiada #2: Reprogramação Subconsciente e Clareza de Decisão.</p>
+      </div>
+
+      <div style="margin-bottom: 20px; padding: 15px; background:#1a1a1a; border-radius:8px;">
+        <h3 class="gold-text">Módulo 3: Consolidação da Nova Realidade</h3>
+        <p>Aprenda a reescrever essa jornada a cada vez que você vê essas aulas. Entenda que quem muda é você; as aulas estão ali para te direcionar e guiar no caminho.</p>
+        <p style="color:#f3e5ab; font-weight:600; margin-top:10px;">🧘‍♂️ Meditação Guiada #3: Ancoragem Vitalícia para Manter a Governança Pessoal.</p>
+      </div>
+
+      <!-- Bônus Financeiro -->
+      <div style="margin-top: 25px; padding: 20px; border: 1px solid #d4af37; border-radius:8px; text-align:center; background:#181818;">
+        <h3 style="color:#fff; text-transform:uppercase;">🎁 BÔNUS EXCLUSIVO: 3 Aulas de Finanças & Investimentos</h3>
+        <p style="margin-top:8px;">Explicando do básico ao avançado como você pode ter uma estratégia simples para alavancar e modificar a sua realidade financeira, assim como eu mudei a minha!</p>
+      </div>
+    </div>
+
+    <!-- Bloco 6: O Ciclo de 21 Dias é para você? -->
+    <div class="block-card">
+      <h2 style="color:#d4af37; margin-bottom:15px;">Esse ciclo de <span class="num-21">21</span> dias para clareza é para você que:</h2>
+      <ul style="list-style:none; padding-left:0;">
+        <li style="margin-bottom:10px;">✔️ Sente que pode ir mais longe, mas tem algo que te impede?</li>
+        <li style="margin-bottom:10px;">✔️ Já buscou várias formas de fazer e não funcionaram do jeito que você queria?</li>
+        <li style="margin-bottom:10px;">✔️ Quer entender como funciona o seu organismo por trás dessa criação dessa realidade que você tem hoje?</li>
+        <li style="margin-bottom:10px;">✔️ Sabe que isso não é só uma teoria rasa?</li>
+        <li style="margin-bottom:10px;">✔️ Está literalmente pronto ou pronta para ter resultados reais?</li>
+        <li style="margin-bottom:10px;">✔️ Quer alguma coisa concreta que vá realmente fazer a diferença sem enrolação, direto ao ponto?</li>
+      </ul>
+    </div>
+
+    <!-- Bloco 7: Depoimentos -->
+    <div style="max-width:900px; margin:40px auto; text-align:center;">
+      <h2 style="color:#d4af37; margin-bottom:10px;">Essas pessoas reais ultrapassaram essa linha!</h2>
+      <p style="color:#ccc; margin-bottom:30px;">Veja onde elas chegaram:</p>
+      
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p style="color:#d4af37;">★★★★★</p>
+          <p>"Se ver fazendo as mesmas coisas e ter resultados diferentes era o que eu tentava. Esse método me mostrou o que era biológico no meu corpo!"</p>
+          <small style="color:#aaa;">— P. Silva</small>
         </div>
-    </footer>
+        <div class="testimonial-card">
+          <p style="color:#d4af37;">★★★★★</p>
+          <p>"Os áudios de meditação guiada são maravilhosos. O acesso vitalício me garante ouvir sempre que preciso realinhar minha mente."</p>
+          <small style="color:#aaa;">— M. Rocha</small>
+        </div>
+        <div class="testimonial-card">
+          <p style="color:#d4af37;">★★★★★</p>
+          <p>"A história do Rodrigo com o CID T90.5 provou que não existem desculpas. A clareza mental que ganhei em 21 dias foi surreal!"</p>
+          <small style="color:#aaa;">— A. Costa</small>
+        </div>
+        <div class="testimonial-card">
+          <p style="color:#d4af37;">★★★★★</p>
+          <p>"Nas finanças eu sentia que chegava em um ponto e não ganhava mais. Aplicando a estratégia simples do bônus, mudei meu patamar financeiro!"</p>
+          <small style="color:#aaa;">— R. Mendes</small>
+        </div>
+        <div class="testimonial-card">
+          <p style="color:#d4af37;">★★★★★</p>
+          <p>"Aprender a investir com a visão simples dada no bônus me trouxe a tranquilidade que eu precisava para crescer."</p>
+          <small style="color:#aaa;">— C. Ferreira</small>
+        </div>
+        <div class="testimonial-card">
+          <p style="color:#d4af37;">★★★★★</p>
+          <p>"Consegui mudar meu resultado financeiro e destravar minha rotina após alinhar meu interior primeiro!"</p>
+          <small style="color:#aaa;">— G. Oliveira</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bloco 8: FAQ com Segurança -->
+    <div class="block-card">
+      <h2 style="color:#d4af37; text-align:center; margin-bottom:20px;">Perguntas Frequentes</h2>
+      
+      <div class="faq-item">
+        <div class="faq-question">1. Preciso ter experiência para começar?</div>
+        <div class="faq-answer">Não precisa de nenhuma experiência prévia. O método foi desenvolvido para te pegar pela mão do absoluto zero e explicar a teoria e a prática de forma simples e segura.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">2. Não sei como fazer, como devo fazer?</div>
+        <div class="faq-answer">As aulas e os áudios guiados já estão organizados em uma sequência perfeita. Basta assistir às aulas e ouvir as meditações na ordem indicada para o seu organismo responder naturalmente.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">3. Não tenho muito tempo, minha vida é corrida. Quanto tempo preciso dedicar ao dia?</div>
+        <div class="faq-answer">Você precisa de apenas 15 a 20 minutos por dia. O programa é totalmente direto ao ponto e focado na sua rotina prática sem perda de tempo.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">4. Se for forte demais para mim e eu quiser desistir?</div>
+        <div class="faq-answer">Fique totalmente tranquilo(a). O objetivo aqui não é causar desconforto, mas sim criar um estado de segurança para o seu sistema nervoso acalmar e liberar o seu potencial de forma suave e confortável.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">5. Isso funciona mesmo ou é só enrolação para vender curso?</div>
+        <div class="faq-answer">Esse método não é teoria rasa. Ele unifica a neurociência prática com a história real do criador que superou um diagnóstico cruel. Além disso, o que funcionou para ele vem funcionando para dezenas de pessoas.</div>
+      </div>
+    </div>
+
+    <!-- Bloco 9: Garantia de 7 Dias -->
+    <div class="guarantee-box">
+      <h2 style="color:#d4af37; margin-top:0;">🛡️ Garantia de 7 Dias</h2>
+      <p style="margin-top:10px;">Você tem garantia de 7 dias de acordo com o Código do Consumidor, com selo de garantia e risco zero para você testar e comprovar a mudança na sua mente!</p>
+    </div>
+
+    <!-- Bloco 10: Oferta Final e CTA -->
+    <div class="block-card" style="text-align:center; background: linear-gradient(180deg, #181818 0%, #000000 100%); border: 2px solid #d4af37;">
+      <h3 style="color:#d4af37; text-transform:uppercase;">Você vai ter acesso a este segredo que pouquíssimos têm o privilégio de conhecer</h3>
+      <p style="color:#fff; font-size:1.1rem; margin-top:10px;">Com Acesso Vitalício!</p>
+
+      <div style="margin:25px 0;">
+        <div style="color:#ccc; font-size:1.1rem;">Apenas:</div>
+        <div class="price-highlight">R$ 83,97</div>
+        <div style="color:#d4af37; font-weight:700; font-size:1.2rem; margin-top:5px;">ou 12x de R$ 8,68</div>
+      </div>
+
+      <a href="https://pay.kiwify.com.br/mtGFoHg" class="btn-checkout">GARANTA SUA VAGA AGORA</a>
+
+      <p style="color:#d4af37; font-size:1.1rem; font-style:italic; margin-top:25px; font-weight:600;">
+        "O quanto vale a sua liberdade plena e uma mente estruturada?"
+      </p>
+    </div>
+
+  </div>
+
+  <footer style="text-align:center; padding:30px; color:#555; font-size:0.8rem; border-top:1px solid #222;">
+    © Rodrigo Rodrigues. Todos os direitos reservados.
+  </footer>
+
+  <!-- Script para animação de revelação ao rolar a página -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.block-card, .testimonial-card').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
 
 </body>
 </html>
