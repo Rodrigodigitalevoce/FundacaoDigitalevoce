@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundação Digital e Você | Rodrigo Rodrigues</title>
+    <style>
+        :root {
+            --bg-color: #0d0d0d;
+            --card-bg: #161616;
+            --gold-primary: #d4af37;
+            --gold-gradient: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            --text-color: #f5f5f5;
+            --text-muted: #a0a0a0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .gold-text {
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 20px auto;
+            color: var(--text-muted);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold-primary);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--gold-gradient);
+            color: #000;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: opacity 0.3s;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="gold-text">Fundação Digital e Você</h1>
+        <p class="subtitle">Por Rodrigo Rodrigues</p>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <h2>Desarme seu sistema de sobrevivência e <span class="gold-text">assuma o Governo da sua realidade</span>.</h2>
+            <p>Treinamentos, mentorias e literatura focados em clareza, mentalidade e neurofisiologia para a sua transformação pessoal.</p>
+        </section>
+
+        <div class="grid">
+            <!-- Card 1 -->
+            <div class="card">
+                <h3 class="gold-text">14 Dias de Clareza</h3>
+                <p>Programa prático de transformação mental para desarmar bloqueios e reconectar você com o seu propósito essencial.</p>
+                <a href="#" class="btn">Saber Mais</a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <h3 class="gold-text">Mais Esperto Que Você Mesmo</h3>
+                <p>Livro autoral sobre como desarmar o seu sistema de sobrevivência e assumir o Governo da sua realidade.</p>
+                <a href="#" class="btn">Garantir Livro</a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <h3 class="gold-text">Contratos Invisíveis</h3>
+                <p>Identifique e quebre os acordos mentais ocultos que travam seu crescimento pessoal e financeiro.</p>
+                <a href="#" class="btn">Garantir Livro</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Fundação Digital e Você. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
