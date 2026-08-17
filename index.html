@@ -42,7 +42,7 @@
             text-shadow: 0px 0px 10px rgba(212, 175, 55, 0.4);
         }
         
-        /* Animações de Scroll e Fade In */
+        /* Animações de Scroll */
         .reveal {
             opacity: 0;
             transform: translateY(40px);
@@ -51,16 +51,6 @@
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
-        }
-
-        .fade-in-element {
-            animation: fadeInElement 1.5s ease-in-out forwards;
-            opacity: 0;
-        }
-
-        @keyframes fadeInElement {
-            0% { opacity: 0; transform: scale(0.95); }
-            100% { opacity: 1; transform: scale(1); }
         }
 
         /* Barra Superior */
@@ -89,10 +79,10 @@
             margin: 0 auto;
         }
 
-        /* Hero / Cabeçalho */
+        /* Hero / Cabeçalho limpo */
         .hero {
             text-align: center;
-            padding: 60px 20px 40px;
+            padding: 80px 20px 40px;
         }
         .hero h1 {
             font-size: 2.8rem;
@@ -104,34 +94,6 @@
             font-size: 1.15rem;
             color: #ddd;
             margin-bottom: 40px;
-        }
-        
-        /* Selo de Autoridade Profissional (Substituto elegante para a foto) */
-        .authority-badge {
-            background: linear-gradient(135deg, #1a1a1a, #0a0a0a);
-            border: 2px solid var(--gold-primary);
-            box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
-            border-radius: 12px;
-            max-width: 550px;
-            margin: 0 auto 30px;
-            padding: 20px;
-            text-align: center;
-        }
-        .authority-badge h3 {
-            color: var(--gold-light);
-            font-size: 1.4rem;
-            font-weight: 800;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-        }
-        .authority-badge p {
-            color: #ccc;
-            font-size: 0.95rem;
-            margin-bottom: 0;
-        }
-        .authority-badge .highlight-impact {
-            color: var(--gold-primary);
-            font-weight: 700;
         }
 
         /* Botões */
@@ -261,14 +223,8 @@
         <p>A transformação real de pessoas reais.</p>
     </div>
 
-    <!-- Hero Section -->
+    <!-- Hero Section Limpa (Sem círculos ou elementos quebrados) -->
     <section class="hero reveal">
-        <!-- Selo de Autoridade de Alto Impacto com Fade In -->
-        <div class="authority-badge fade-in-element">
-            <h3>RODRIGO RODRIGUES</h3>
-            <p>Mentor & Criador do Método • <span class="highlight-impact">+2.000 Vidas Modificadas</span></p>
-        </div>
-        
         <h1>Método <span class="destaque-21">21</span> Dias para Clareza Mental e Orgânica</h1>
         <p>Um programa direto ao ponto de <span class="destaque-21">21</span> dias para destravar o freio biológico emocional, acalmar o sistema nervoso e criar extratos de segurança para preparar a mente para assumir uma nova realidade de sucesso aonde você alcança o que quer.</p>
         
